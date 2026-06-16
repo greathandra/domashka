@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schema.org — StructuredData Guide</title>
+  <meta name="description" content="Schema.org: словарь типов и свойств для структурированных данных.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Schema.org — руководство">
+  <meta property="og:description" content="Типы, свойства и примеры разметки Schema.org.">
+  <meta property="og:url" content="https://example.com/schema.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Schema.org",
+    "description": "Словарь типов и свойств для структурированных данных",
+    "datePublished": "2026-06-16",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>Schema.org</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">Schema.org</h1>
+    <p class="c-paragraph page-hero__text">
+      <span class="c-badge c-badge--rounded c-badge--brand">Словарь</span>
+      Единый стандарт типов и свойств для описания сущностей в интернете.
+    </p>
+  </div>
+
+  <main class="section u-pillar-box content" itemscope itemtype="https://schema.org/TechArticle">
+    <div class="content__body">
+      <h2 class="c-heading u-medium" itemprop="headline">Обзор</h2>
+      <p class="c-paragraph" itemprop="description">
+        Schema.org — совместный проект Google, Microsoft, Yahoo и Yandex. Это не формат записи,
+        а <em>словарь</em>: набор типов (<code class="u-code">Product</code>, <code class="u-code">Article</code>,
+        <code class="u-code">Organization</code>) и свойств (<code class="u-code">name</code>, <code class="u-code">price</code>).
+        Записывать данные можно через JSON-LD, Microdata или RDFa.
+      </p>
+
+      <h2 class="c-heading u-medium">Популярные типы</h2>
+      <div class="o-grid o-grid--wrap o-grid--medium-fit">
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">Article</h3><p class="c-paragraph">Статьи, блог-посты, новости</p></div></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">Product</h3><p class="c-paragraph">Товары интернет-магазинов</p></div></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">LocalBusiness</h3><p class="c-paragraph">Компании, адреса, часы работы</p></div></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">FAQPage</h3><p class="c-paragraph">Блок вопросов и ответов</p></div></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">Event</h3><p class="c-paragraph">Концерты, вебинары, мероприятия</p></div></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+          <div class="c-card format-card"><div class="c-card__body"><h3 class="c-heading u-xsmall">BreadcrumbList</h3><p class="c-paragraph">Навигационные цепочки</p></div></div>
+        </div>
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Пример Microdata</h2>
+      <pre class="u-code u-code--multiline"><code>&lt;article itemscope itemtype="https://schema.org/Article"&gt;
+  &lt;h1 itemprop="headline"&gt;Заголовок статьи&lt;/h1&gt;
+  &lt;time itemprop="datePublished" datetime="2026-06-16"&gt;16 июня 2026&lt;/time&gt;
+  &lt;div itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;
+    &lt;span itemprop="name"&gt;Иван Петров&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p itemprop="description"&gt;Краткое описание...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+      <p class="c-paragraph u-margin-top">
+        Рекомендуемый способ записи — <a href="jsonld.html" class="c-link">JSON-LD</a>.
+        Проверить разметку можно в <a href="tools.html" class="c-link">инструментах валидации</a>.
+      </p>
+
+      <div class="content-nav u-margin-top">
+        <a href="about.html" class="c-button c-button--ghost">← О разметке</a>
+        <a href="jsonld.html" class="c-button c-button--brand">JSON-LD →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="https://schema.org/" class="c-link" target="_blank" rel="noopener">schema.org</a>
+        <a href="jsonld.html" class="c-link">JSON-LD</a>
+        <a href="tools.html" class="c-link">Инструменты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

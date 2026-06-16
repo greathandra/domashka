@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Микроразметка и структурированные данные</title>
+  <meta name="description" content="Руководство по микроразметке: Schema.org, JSON-LD, Open Graph и Twitter Cards.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="StructuredData Guide — Главная">
+  <meta property="og:description" content="Полное руководство по микроразметке для веб-разработчиков.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="StructuredData Guide">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="StructuredData Guide">
+  <meta name="twitter:description" content="Schema.org, JSON-LD, Open Graph и Twitter Cards.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StructuredData Guide",
+    "url": "https://example.com/",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero u-pillar-box">
+    <div class="hero__inner">
+      <span class="c-badge c-badge--rounded c-badge--brand hero__badge">SEO &amp; Social</span>
+      <h1 class="c-heading u-super hero__title">
+        Микроразметка и структурированные данные
+        <div class="c-heading__sub">Schema.org · JSON-LD · Open Graph · Twitter Cards</div>
+      </h1>
+      <p class="c-paragraph hero__text">
+        Учебный сайт о том, как помочь поисковым системам и социальным сетям
+        понимать содержимое ваших страниц.
+      </p>
+      <div class="c-input-group hero__actions">
+        <a href="about.html" class="c-button c-button--brand">Начать обучение</a>
+        <a href="compare.html" class="c-button c-button--ghost">Сравнить форматы</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section u-pillar-box">
+    <h2 class="c-heading u-xlarge section__title">Разделы сайта</h2>
+    <p class="c-paragraph section__lead">Выберите тему для изучения — каждый раздел содержит теорию, примеры кода и практические советы.</p>
+
+    <div class="o-grid o-grid--wrap o-grid--medium-fit">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="about.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header c-card__header--brand">
+              <h3 class="c-heading u-small">О микроразметке</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Что такое структурированные данные, зачем они нужны и как влияют на SEO и соцсети.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="schema.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header">
+              <h3 class="c-heading u-small">Schema.org</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Единый словарь типов и свойств для описания сущностей на сайте.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="jsonld.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header c-card__header--info">
+              <h3 class="c-heading u-small">JSON-LD</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Предпочтительный формат Google — данные в блоке script без изменения HTML.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="opengraph.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header c-card__header--warning">
+              <h3 class="c-heading u-small">Open Graph</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Мета-теги og:* для красивых превью в Facebook, VK, Telegram и LinkedIn.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="twitter.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header c-card__header--success">
+              <h3 class="c-heading u-small">Twitter Cards</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Расширенные карточки для платформы X при публикации ссылок.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <a href="compare.html" class="page-card-link">
+          <article class="c-card page-card">
+            <header class="c-card__header">
+              <h3 class="c-heading u-small">Сравнение форматов</h3>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Таблица: когда использовать Schema.org, JSON-LD, OG и Twitter Cards.</p>
+              <span class="c-link">Читать →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt u-pillar-box">
+    <div role="alert" class="c-alert c-alert--info">
+      <strong>Каждая страница сайта</strong> содержит собственную разметку JSON-LD и Open Graph.
+      Откройте исходный код любой страницы, чтобы увидеть примеры в действии.
+    </div>
+    <div class="o-grid o-grid--wrap o-grid--medium-fit">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+        <div class="c-card feature-card">
+          <div class="c-card__body">
+            <h3 class="c-heading u-xsmall">🔍 SEO</h3>
+            <p class="c-paragraph">Rich snippets, FAQ, товары, рейтинги в поисковой выдаче.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+        <div class="c-card feature-card">
+          <div class="c-card__body">
+            <h3 class="c-heading u-xsmall">📱 Соцсети</h3>
+            <p class="c-paragraph">Контроль заголовка, описания и изображения при шаринге.</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium">
+        <div class="c-card feature-card">
+          <div class="c-card__body">
+            <h3 class="c-heading u-xsmall">🛠 Инструменты</h3>
+            <p class="c-paragraph"><a href="tools.html" class="c-link">Валидаторы</a> для проверки разметки перед публикацией.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="schema.html" class="c-link">Schema.org</a>
+        <a href="jsonld.html" class="c-link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link">Open Graph</a>
+        <a href="twitter.html" class="c-link">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Cards — StructuredData Guide</title>
+  <meta name="description" content="Twitter Cards: мета-теги twitter:* для расширенных карточек в X.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Twitter Cards — руководство">
+  <meta property="og:description" content="Настройка карточек для платформы X.">
+  <meta property="og:url" content="https://example.com/twitter.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Twitter Cards — руководство">
+  <meta name="twitter:description" content="Мета-теги twitter:* для платформы X.">
+  <meta name="twitter:site" content="@webdev">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Twitter Cards",
+    "description": "Мета-теги для расширенных карточек в X",
+    "datePublished": "2026-06-16",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero page-hero--success u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>Twitter Cards</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">Twitter Cards</h1>
+    <p class="c-paragraph page-hero__text">
+      <span class="c-badge c-badge--rounded c-badge--success">X (Twitter)</span>
+      Расширенные карточки при публикации ссылок в социальной сети X.
+    </p>
+  </div>
+
+  <main class="section u-pillar-box content">
+    <div class="content__body">
+      <h2 class="c-heading u-medium">Типы карточек</h2>
+      <div class="o-grid o-grid--wrap o-grid--medium-fit">
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card format-card">
+            <header class="c-card__header"><h3 class="c-heading u-xsmall">summary</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Маленькое превью слева, заголовок и описание справа.</p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card format-card">
+            <header class="c-card__header c-card__header--success"><h3 class="c-heading u-xsmall">summary_large_image</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Большое изображение сверху — самый популярный тип.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Основные теги</h2>
+      <pre class="u-code u-code--multiline"><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:site" content="@mycompany"&gt;
+&lt;meta name="twitter:creator" content="@author"&gt;
+&lt;meta name="twitter:title" content="Заголовок для Twitter"&gt;
+&lt;meta name="twitter:description" content="Описание карточки"&gt;
+&lt;meta name="twitter:image" content="https://example.com/card.jpg"&gt;
+&lt;meta name="twitter:image:alt" content="Описание изображения"&gt;</code></pre>
+
+      <div role="alert" class="c-alert c-alert--info u-margin-top">
+        Если Twitter Cards не заданы, X часто использует данные из
+        <a href="opengraph.html" class="c-link">Open Graph</a>. Но явные twitter-теги дают больше контроля.
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Рекомендуемый минимум</h2>
+      <ul class="format-list content-list">
+        <li><code class="u-code">twitter:card</code> — тип карточки</li>
+        <li><code class="u-code">twitter:title</code> и <code class="u-code">twitter:description</code></li>
+        <li><code class="u-code">twitter:image</code> — минимум 300×157, рекомендуется 1200×628</li>
+        <li><code class="u-code">twitter:site</code> — @аккаунт компании</li>
+      </ul>
+
+      <div class="content-nav u-margin-top">
+        <a href="opengraph.html" class="c-button c-button--ghost">← Open Graph</a>
+        <a href="compare.html" class="c-button c-button--brand">Сравнение →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="opengraph.html" class="c-link">Open Graph</a>
+        <a href="compare.html" class="c-link">Сравнение</a>
+        <a href="tools.html" class="c-link">Инструменты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

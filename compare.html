@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение форматов — StructuredData Guide</title>
+  <meta name="description" content="Сравнение Schema.org, JSON-LD, Open Graph и Twitter Cards.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Сравнение форматов разметки">
+  <meta property="og:description" content="Когда использовать каждый формат структурированных данных.">
+  <meta property="og:url" content="https://example.com/compare.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Сравнение форматов разметки",
+    "datePublished": "2026-06-16",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>Сравнение</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">Сравнение форматов</h1>
+    <p class="c-paragraph page-hero__text">Когда использовать Schema.org, JSON-LD, Open Graph и Twitter Cards.</p>
+  </div>
+
+  <main class="section u-pillar-box content">
+    <div class="content__body">
+      <div class="c-card compare-card">
+        <div class="c-card__body compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Критерий</th>
+                <th>Schema.org</th>
+                <th>JSON-LD</th>
+                <th>Open Graph</th>
+                <th>Twitter Cards</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Назначение</td>
+                <td>Словарь типов</td>
+                <td>Формат записи</td>
+                <td>Превью в соцсетях</td>
+                <td>Карточки в X</td>
+              </tr>
+              <tr>
+                <td>Где размещается</td>
+                <td>Любой формат</td>
+                <td><code class="u-code">&lt;script&gt;</code></td>
+                <td><code class="u-code">&lt;meta property&gt;</code></td>
+                <td><code class="u-code">&lt;meta name&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Для поисковиков</td>
+                <td><span class="c-badge c-badge--success">Да</span></td>
+                <td><span class="c-badge c-badge--success">Да</span></td>
+                <td><span class="c-badge c-badge--warning">Частично</span></td>
+                <td><span class="c-badge c-badge--ghost">Нет</span></td>
+              </tr>
+              <tr>
+                <td>Для соцсетей</td>
+                <td><span class="c-badge c-badge--ghost">Нет</span></td>
+                <td><span class="c-badge c-badge--ghost">Нет</span></td>
+                <td><span class="c-badge c-badge--success">Да</span></td>
+                <td><span class="c-badge c-badge--success">Да</span></td>
+              </tr>
+              <tr>
+                <td>Рекомендация Google</td>
+                <td><span class="c-badge c-badge--brand">Основа</span></td>
+                <td><span class="c-badge c-badge--brand">Предпочтительно</span></td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Что использовать на практике?</h2>
+      <div class="o-grid o-grid--wrap o-grid--medium-fit">
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card feature-card">
+            <header class="c-card__header c-card__header--brand"><h3 class="c-heading u-xsmall">Для SEO</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">JSON-LD + типы Schema.org под ваш контент (Article, Product, FAQ...).</p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card feature-card">
+            <header class="c-card__header c-card__header--info"><h3 class="c-heading u-xsmall">Для соцсетей</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Open Graph на всех страницах + Twitter Cards для X.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="alert" class="c-alert c-alert--warning u-margin-top">
+        <strong>Итог:</strong> Используйте все форматы вместе. JSON-LD для поиска, OG + Twitter для шаринга.
+        Это не взаимоисключающие технологии.
+      </div>
+
+      <div class="content-nav u-margin-top">
+        <a href="twitter.html" class="c-button c-button--ghost">← Twitter Cards</a>
+        <a href="tools.html" class="c-button c-button--brand">Инструменты →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="schema.html" class="c-link">Schema.org</a>
+        <a href="jsonld.html" class="c-link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link">Open Graph</a>
+        <a href="twitter.html" class="c-link">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

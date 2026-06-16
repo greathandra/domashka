@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О микроразметке — StructuredData Guide</title>
+  <meta name="description" content="Что такое микроразметка и структурированные данные, зачем они нужны сайту.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="О микроразметке">
+  <meta property="og:description" content="Введение в структурированные данные для веб-разработчиков.">
+  <meta property="og:url" content="https://example.com/about.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "О микроразметке",
+    "description": "Введение в структурированные данные",
+    "datePublished": "2026-06-16",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>О разметке</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">О микроразметке</h1>
+    <p class="c-paragraph page-hero__text">Стандартизированный способ описания сущностей на веб-странице для машинного чтения.</p>
+  </div>
+
+  <main class="section u-pillar-box content">
+    <div class="content__body">
+      <h2 class="c-heading u-medium">Что это такое?</h2>
+      <p class="c-paragraph">
+        <strong>Микроразметка</strong> (structured data) — это дополнительная информация о содержимом страницы,
+        которую поисковые роботы и социальные платформы могут однозначно интерпретировать.
+        Вместо того чтобы «угадывать» смысл текста, машина получает явные поля: название, цена, автор, дата.
+      </p>
+
+      <h2 class="c-heading u-medium">Зачем это нужно?</h2>
+      <div class="o-grid o-grid--wrap o-grid--medium-fit u-margin-top">
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card feature-card">
+            <header class="c-card__header c-card__header--brand"><h3 class="c-heading u-xsmall">Поисковая выдача</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Расширенные сниппеты: звёзды рейтинга, цены, FAQ-блоки, хлебные крошки, события.</p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card feature-card">
+            <header class="c-card__header c-card__header--info"><h3 class="c-heading u-xsmall">Социальные сети</h3></header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Контроль превью при публикации ссылки — заголовок, описание, изображение.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Три способа записи Schema.org</h2>
+      <ul class="format-list content-list">
+        <li><strong>JSON-LD</strong> — блок <code class="u-code">&lt;script&gt;</code> в head, рекомендуется Google</li>
+        <li><strong>Microdata</strong> — атрибуты <code class="u-code">itemscope</code>, <code class="u-code">itemprop</code> в HTML</li>
+        <li><strong>RDFa</strong> — атрибуты <code class="u-code">typeof</code>, <code class="u-code">property</code> (реже используется)</li>
+      </ul>
+
+      <div role="alert" class="c-alert c-alert--warning u-margin-top">
+        <strong>Важно:</strong> Open Graph и Twitter Cards — это отдельные протоколы для соцсетей.
+        Они не заменяют Schema.org, а дополняют его. Подробнее — на странице <a href="compare.html" class="c-link">Сравнение</a>.
+      </div>
+
+      <div class="content-nav u-margin-top">
+        <a href="index.html" class="c-button c-button--ghost">← Главная</a>
+        <a href="schema.html" class="c-button c-button--brand">Schema.org →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="schema.html" class="c-link">Schema.org</a>
+        <a href="jsonld.html" class="c-link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link">Open Graph</a>
+        <a href="twitter.html" class="c-link">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

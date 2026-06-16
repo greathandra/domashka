@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инструменты проверки — StructuredData Guide</title>
+  <meta name="description" content="Валидаторы и инструменты для проверки Schema.org, JSON-LD, Open Graph и Twitter Cards.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Инструменты проверки разметки">
+  <meta property="og:description" content="Google Rich Results Test, Schema Validator, Facebook Debugger и другие.">
+  <meta property="og:url" content="https://example.com/tools.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Инструменты проверки",
+    "description": "Валидаторы структурированных данных",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>Инструменты</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">Инструменты проверки</h1>
+    <p class="c-paragraph page-hero__text">Валидаторы для проверки разметки перед публикацией на продакшен.</p>
+  </div>
+
+  <main class="section u-pillar-box content">
+    <div class="content__body">
+      <div class="o-grid o-grid--wrap o-grid--medium-fit">
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header c-card__header--brand">
+              <h2 class="c-heading u-xsmall">Google Rich Results Test</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Проверка JSON-LD и Microdata на соответствие требованиям Google для rich results.</p>
+              <span class="c-badge c-badge--rounded c-badge--brand">JSON-LD · Microdata</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://search.google.com/test/rich-results" class="c-link" target="_blank" rel="noopener">search.google.com/test/rich-results →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header">
+              <h2 class="c-heading u-xsmall">Schema Markup Validator</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Официальный валидатор разметки Schema.org от сообщества.</p>
+              <span class="c-badge c-badge--rounded">Schema.org</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://validator.schema.org/" class="c-link" target="_blank" rel="noopener">validator.schema.org →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header c-card__header--warning">
+              <h2 class="c-heading u-xsmall">Facebook Sharing Debugger</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Проверка Open Graph и сброс кэша превью для Meta-платформ.</p>
+              <span class="c-badge c-badge--rounded c-badge--warning">Open Graph</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://developers.facebook.com/tools/debug/" class="c-link" target="_blank" rel="noopener">developers.facebook.com/tools/debug →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header c-card__header--success">
+              <h2 class="c-heading u-xsmall">Twitter Card Validator</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Предпросмотр карточки перед публикацией в X (Twitter).</p>
+              <span class="c-badge c-badge--rounded c-badge--success">Twitter Cards</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://cards-dev.twitter.com/validator" class="c-link" target="_blank" rel="noopener">cards-dev.twitter.com/validator →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header c-card__header--info">
+              <h2 class="c-heading u-xsmall">Яндекс Валидатор микроразметки</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Проверка структурированных данных для поиска Яндекса.</p>
+              <span class="c-badge c-badge--rounded c-badge--info">Яндекс</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://webmaster.yandex.ru/tools/microtest/" class="c-link" target="_blank" rel="noopener">webmaster.yandex.ru/tools/microtest →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+          <div class="c-card tool-card">
+            <header class="c-card__header">
+              <h2 class="c-heading u-xsmall">LinkedIn Post Inspector</h2>
+            </header>
+            <div class="c-card__body">
+              <p class="c-paragraph">Проверка OG-разметки для превью в LinkedIn.</p>
+              <span class="c-badge c-badge--rounded">Open Graph</span>
+              <p class="c-paragraph u-margin-top">
+                <a href="https://www.linkedin.com/post-inspector/" class="c-link" target="_blank" rel="noopener">linkedin.com/post-inspector →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="alert" class="c-alert c-alert--success u-margin-top">
+        <strong>Чеклист перед публикацией:</strong> JSON-LD → Google Rich Results Test → OG → Facebook Debugger → Twitter Validator.
+      </div>
+
+      <div class="content-nav u-margin-top">
+        <a href="compare.html" class="c-button c-button--ghost">← Сравнение</a>
+        <a href="index.html" class="c-button c-button--brand">На главную →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="schema.html" class="c-link">Schema.org</a>
+        <a href="jsonld.html" class="c-link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link">Open Graph</a>
+        <a href="twitter.html" class="c-link">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Graph — StructuredData Guide</title>
+  <meta name="description" content="Open Graph протокол: мета-теги og:* для превью в социальных сетях.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Open Graph — руководство">
+  <meta property="og:description" content="Как настроить og:title, og:description, og:image для соцсетей.">
+  <meta property="og:url" content="https://example.com/opengraph.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="StructuredData Guide">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Open Graph",
+    "description": "Протокол мета-тегов для социальных сетей",
+    "datePublished": "2026-06-16",
+    "inLanguage": "ru-RU"
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@blaze/css@12.2.0/dist/blaze/blaze.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="o-grid o-grid--center u-pillar-box site-header__inner">
+      <div class="o-grid__cell o-grid__cell--width-30@medium">
+        <a href="index.html" class="site-logo c-heading u-small">Structured<span class="site-logo__accent">Data</span></a>
+      </div>
+      <nav class="o-grid__cell o-grid__cell--width-70@medium site-nav" role="navigation" aria-label="Основная навигация">
+        <a href="index.html" class="c-link site-nav__link">Главная</a>
+        <a href="about.html" class="c-link site-nav__link">О разметке</a>
+        <a href="schema.html" class="c-link site-nav__link">Schema.org</a>
+        <a href="jsonld.html" class="c-link site-nav__link">JSON-LD</a>
+        <a href="opengraph.html" class="c-link site-nav__link">Open Graph</a>
+        <a href="twitter.html" class="c-link site-nav__link">Twitter</a>
+        <a href="compare.html" class="c-link site-nav__link">Сравнение</a>
+        <a href="tools.html" class="c-link site-nav__link">Инструменты</a>
+        <button type="button" class="c-button c-button--ghost site-nav__toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero page-hero--warning u-pillar-box">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="c-link">Главная</a> / <span>Open Graph</span>
+    </nav>
+    <h1 class="c-heading u-xlarge page-hero__title">Open Graph</h1>
+    <p class="c-paragraph page-hero__text">
+      <span class="c-badge c-badge--rounded c-badge--warning">Facebook / Meta</span>
+      Протокол мета-тегов для управления превью ссылок в соцсетях.
+    </p>
+  </div>
+
+  <main class="section u-pillar-box content">
+    <div class="content__body">
+      <h2 class="c-heading u-medium">Что это?</h2>
+      <p class="c-paragraph">
+        Open Graph (OG) — протокол, созданный Facebook. Мета-теги с префиксом <code class="u-code">og:</code>
+        размещаются в <code class="u-code">&lt;head&gt;</code> и описывают, как ссылка должна выглядеть
+        при публикации. Используется Facebook, VK, Telegram, LinkedIn и многими мессенджерами.
+      </p>
+
+      <h2 class="c-heading u-medium u-margin-top">Обязательные теги</h2>
+      <div class="c-card compare-card u-margin-top">
+        <div class="c-card__body compare-table-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Тег</th><th>Назначение</th></tr></thead>
+            <tbody>
+              <tr><td><code class="u-code">og:title</code></td><td>Заголовок превью</td></tr>
+              <tr><td><code class="u-code">og:description</code></td><td>Краткое описание</td></tr>
+              <tr><td><code class="u-code">og:image</code></td><td>URL изображения (рекомендуется 1200×630)</td></tr>
+              <tr><td><code class="u-code">og:url</code></td><td>Канонический URL страницы</td></tr>
+              <tr><td><code class="u-code">og:type</code></td><td>Тип: website, article, product...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="c-heading u-medium u-margin-top">Пример разметки</h2>
+      <pre class="u-code u-code--multiline"><code>&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="og:title" content="Заголовок страницы"&gt;
+&lt;meta property="og:description" content="Описание для превью"&gt;
+&lt;meta property="og:url" content="https://example.com/article"&gt;
+&lt;meta property="og:image" content="https://example.com/preview.jpg"&gt;
+&lt;meta property="og:image:width" content="1200"&gt;
+&lt;meta property="og:image:height" content="630"&gt;
+&lt;meta property="og:locale" content="ru_RU"&gt;
+&lt;meta property="og:site_name" content="Мой сайт"&gt;</code></pre>
+
+      <div role="alert" class="c-alert c-alert--warning u-margin-top">
+        <strong>Совет:</strong> После изменения OG-тегов сбросьте кэш через
+        <a href="https://developers.facebook.com/tools/debug/" class="c-link" target="_blank" rel="noopener">Facebook Sharing Debugger</a>.
+      </div>
+
+      <div class="content-nav u-margin-top">
+        <a href="jsonld.html" class="c-button c-button--ghost">← JSON-LD</a>
+        <a href="twitter.html" class="c-button c-button--brand">Twitter Cards →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer u-pillar-box" role="contentinfo">
+    <div class="o-grid o-grid--wrap">
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium">
+        <p class="c-paragraph site-footer__copy">© 2026 StructuredData Guide · <a href="https://www.blazeui.com/" class="c-link" target="_blank" rel="noopener">Blaze UI</a></p>
+      </div>
+      <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-50@medium site-footer__links">
+        <a href="https://ogp.me/" class="c-link" target="_blank" rel="noopener">ogp.me</a>
+        <a href="twitter.html" class="c-link">Twitter Cards</a>
+        <a href="tools.html" class="c-link">Инструменты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
